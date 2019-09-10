@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const File
 
 module.exports = {
   entry: './src/pages/main/js/index.js',
@@ -10,11 +11,11 @@ module.exports = {
   },
     plugins: [
         new MiniCssExtractPlugin({
-        // Options similar to the same options in webpackOptions.output
-        // all options are optional
-        filename: './css/style.css',
-        chunkFilename: 'chunk-[id].scss',
-        ignoreOrder: false, // Enable to remove warnings about conflicting order
+            // Options similar to the same options in webpackOptions.output
+            // all options are optional
+            filename: './css/style.css',
+            chunkFilename: 'chunk-[id].scss',
+            ignoreOrder: false, // Enable to remove warnings about conflicting order
         }),
         new HtmlWebpackPlugin({
             filename: './index.html',
@@ -54,6 +55,7 @@ module.exports = {
                 use: [
                     {
                         loader: 'file-loader',
+                        outputPath: './img/',
                         options: {
                             name: './img/[name].[ext]',
                             useRelativePath: true          
@@ -62,5 +64,10 @@ module.exports = {
                 ],
             },
         ]
-    }
+    },
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true,
+        port: 9000
+      }
 };
