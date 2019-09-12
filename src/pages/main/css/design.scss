@@ -4,12 +4,24 @@
     -webkit-box-sizing: border-box;
 }
 
-.g-wrap {
+a {
+    cursor: pointer;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+
+.wrap {
     min-width: 320px;
     padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #f2f2f2;
     @media screen and (min-width: 768px) {
         max-width: 738px;
     }
@@ -22,26 +34,33 @@
 .steam {
     display: inline-block;
     text-align: center;
-    border: 2px solid #fff;
-    padding: 10px 50px;
+    border: 1px solid #fff;
+    padding: 10px 24px;
     vertical-align: middle;
     background-color: #000;
     border-radius: 8px;
     width: 200px;
+    outline: none;
 
 
     &__icon {
-        display: block;
+        display: inline-block;
         font-size: 0;
         width: 35px;
         height: 35px;
+        margin-right: 12px;
     }
 
     &__text {
         color: #fff;
         display: inline-block;
         text-decoration: none;
-        width: 140px;
+        text-align: left;
+        width: 80px;
+        font-family: Helvetica;
+        font-size: 11px;
+        color: #FFFFFF;
+        letter-spacing: -0.37px;
         &:hover {
             text-decoration: none;
             color: inherit;
@@ -50,10 +69,12 @@
 }
 
 .hero {
-    background-image: url('/Main_page_320.jpg');
-    background-color: #f2f2f2;
+
+    font-size: 0;
+    background-image: url('http://placeimg.com/1900/1600');
+    // background-color: #f2f2f2;
     background-position: center;
-    background-size: auto;
+    background-size: cover;
 
     &-wrap {
         display: flex;
@@ -61,14 +82,58 @@
         align-items: center;
     }
 
+    &__title {
+        font-family: 'Russo One', sans-serif;
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-size: 28px;
+        color: #FFFFFF;
+        letter-spacing: -0.35px;
+        text-align: center;
+        line-height: 30px;
+        text-shadow: 0 2px 4px rgba(29,29,29,0.60);
+    }
+
+    &__image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+        width: 214px;
+        height: 158px;
+    }
+
     .social-links {
         margin-top: 42px;
+        font-size: 0;
+        outline: none;
+        
         &__item {
             height: 45px;
             width: 45px;
             border-radius: 8px;
             padding: 10px;
             display: block;
+            background-color: #e2e2e2;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50), inset 0 1px 3px 0 rgba(0,0,0,0.50);
+
+            &--twitter {
+                background-color: #51BBD7;
+            }
+
+            &--fb {
+                background-color: #3B599F;
+            }
+
+            &--instagram {
+                background-color: #CE2A84;
+            }
+
+            &--discord {
+                background-color: #804DFF;
+            }
+
+
             &:not(:first-child) {
                 margin-left: 20px;
             }
