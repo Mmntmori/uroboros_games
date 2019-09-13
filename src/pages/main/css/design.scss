@@ -35,12 +35,32 @@ html,body {
     display: inline-block;
     text-align: center;
     border: 1px solid #fff;
-    padding: 10px 24px;
+    padding: 10px 36px;
     vertical-align: middle;
     background-color: #000;
     border-radius: 8px;
-    width: 200px;
+    // width: 200px;
     outline: none;
+    transition-duration: 300ms;
+    transition-property: border-color;
+    svg {
+        & > path:first-child {
+            transition-duration: 300ms;
+            transition-property: fill;            
+        }
+    }
+    &:hover {
+        border-color: #e0e0e0;
+        transition-duration: 300ms;
+        transition-property: border-color;
+            svg {
+            & > path:first-child {
+                transition-duration: 300ms;
+                transition-property: fill;            
+                fill: #e0e0e0;
+            }
+        }
+    }
 
 
     &__icon {
@@ -57,13 +77,17 @@ html,body {
         text-decoration: none;
         text-align: left;
         width: 80px;
-        font-family: Helvetica;
-        font-size: 11px;
+        font-family: 'Roboto';
+        font-size: 16px;
         color: #FFFFFF;
         letter-spacing: -0.37px;
+        vertical-align: top;
+        span {
+            font-weight: 900;
+        }
         &:hover {
             text-decoration: none;
-            color: inherit;
+            color:  #fff;
         }
     }
 }
@@ -80,6 +104,8 @@ html,body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 77px 0 30px 0;
+
     }
 
     &__title {
@@ -152,6 +178,134 @@ html,body {
     
 }
 
-.hero-wrap {
-    padding: 77px 0 30px 0;
+.features {
+    background-color: #1E2343;
+    padding: 45px 0;
+    &-title {
+        font-family: 'Russo One', sans-serif;
+        font-size: 20px;
+        color: #FFFFFF;
+        letter-spacing: -0.33px;
+        text-align: center;
+        margin: 0 0 18px 0;
+    }
+
+    &-text {
+        opacity: 0.6;
+        font-family: 'Play', sans-serif;
+        font-size: 16px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-align: center;
+        margin: 0 0 25px 0;
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -35px;
+
+        &__image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 150px;height: 150px;
+        }
+    }
+
+    &-item {
+        margin-bottom: 35px;
+        max-width: 240px;
+        &__image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 150px;height: 150px;
+            img {
+                display: block;
+                width: 100%;height: auto
+            }
+        }
+
+        &__text {
+            font-family: 'Russo One', sans-serif;
+            font-size: 15px;
+            color: #FFFFFF;
+            letter-spacing: -0.2px;
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+}
+
+
+.description {
+    background-color: #1E2343;
+    
+    &-yt-video {
+        width: 100%;
+        font-size: 0;
+        iframe {
+            width: 100%;
+            height: calc(100vw/16*9);
+        }
+    }
+
+    &-text-wrap {
+        padding: 50px 0 35px;
+    }
+
+    &-title {
+        display: block;
+        font-family: 'Russo One', sans-serif;
+        font-size: 20px;
+        color: #FFFFFF;
+        letter-spacing: -0.33px;
+        text-align: center;
+        margin: 0;
+    }
+
+    &-text {
+        display: block;
+        margin: 0;
+        opacity: 0.6;
+        font-family: 'Play';
+        font-size: 16px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-align: center;
+    }
+
+    &-image {
+        width: 100%;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+
+}
+
+.download-game {
+    background-color: #1E2343;
+    background-image: url('');
+    &-wrap {
+        padding: 124px 0 64px;
+        text-align: center
+    }
+
+    &-title {
+        font-family: 'Russo one', sans-serif;
+        font-size: 24px;
+        color: #FFFFFF;
+        letter-spacing: -0.3px;
+        line-height: 50px;
+        text-shadow: 0 2px 4px rgba(46,46,46,0.90);
+        margin: 0 0 17px 0;
+    }
 }
