@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href='https://fonts.googleapis.com/css?family=Play&display=swap' rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Russo+One&display=swap' rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Roboto&display=swap' rel='stylesheet')
+
+        title Document
+    body
+        header.header
+            .wrap
+                .header-wrap
+                    .header-side-menu-icon.js-side-menu-btn
+                        .header-side-menu-icon__el
+                    .header-logo
+                        img(src="http://placeimg.com/90/90").header-logo__img
+                    nav.header-navigation
+                        a(href="#!").header-navigation__item Главная
+                        a(href="#!").header-navigation__item О Студии
+                        a(href="#!").header-navigation__item Игры
+                        a(href="#!").header-navigation__item Вакансии
+                        a(href="#!").header-navigation__item Комьюнити
+                        a(href="#!").header-navigation__item Блог
+                    .header-lang
+                        a(href="#!").header-lang__item РУС
+                        a(href="#!").header-lang__item ENG
+        .side-menu._open
+            .side-menu-icon.js-side-menu-btn
+                .side-menu-icon__el
+            nav.side-menu-navigation
+                a(href="#!").side-menu-navigation__item Главная
+                a(href="#!").side-menu-navigation__item О Студии
+                a(href="#!").side-menu-navigation__item Игры
+                a(href="#!").side-menu-navigation__item Вакансии
+                a(href="#!").side-menu-navigation__item Комьюнити
+                a(href="#!").side-menu-navigation__item Блог
+        ._overlay
+
+
+        script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
