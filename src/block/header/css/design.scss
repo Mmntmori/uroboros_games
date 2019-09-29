@@ -56,6 +56,9 @@ html,body {
 
 .header {
     padding: 8px 0;
+    @media screen and (min-width:1170px) {
+        padding: 4px 0;
+    }
     position: absolute;
     top: 0;
     width: 100%;
@@ -66,9 +69,12 @@ html,body {
         justify-content: space-between;
     }
     &-side-menu-icon {
-        flex: 1 1 0;
         padding: 6px 0;  
         outline: none;  
+        @media screen and (min-width: 1170px){
+            display: none;
+        }
+    
         &:hover {
             .header-side-menu-icon__el,
             .header-side-menu-icon__el:before,
@@ -121,17 +127,31 @@ html,body {
 
     &-navigation {
         display: none;
+        @media screen and (min-width: 1170px){
+            display: flex;margin-right: auto;
+        }
+        &__item {
+            font-family: 'Play', sans-serif;
+            font-size: 20px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            margin-right: 35px;
+        }
+    
     }
 
     &-logo {
         width: 70px;
+        @media screen and (min-width: 1170px) {
+            width: 87px;
+            margin-right: 40px;
+        }
         height: auto;
         overflow: hidden;
-        flex: 1 1 0;
         text-align: center;
         &__img {
             display: block;
-            width: 70px;
+            width: 100%;
             height: auto;
             object-fit: cover;
         }
@@ -139,7 +159,6 @@ html,body {
 
     &-lang {
         display: flex;
-        flex: 1 1 0;
         &__item {
             display: block;
             font-family: 'Play', sans-serif;
@@ -160,6 +179,16 @@ html,body {
 }
 
 .side-menu {
+
+    @media screen and (min-width: 768px){
+        width: auto;
+        padding: 20px 30px;
+    }
+
+    @media screen and (min-width: 1170px){
+        display: none;
+    }
+
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -245,9 +274,20 @@ html,body {
         text-align: center;
         height: 100%;
         width: 100%;
+        @media screen and (min-width: 768px){
+            margin-top: 50px;
+            justify-content: flex-start;
+        }
+    
         &__item {
             display: block;
             width: 100%;
+            @media screen and (min-width: 768px){
+                width: 250px;
+                text-align: left;
+                padding: 0 0 0 25px;
+            }
+        
             font-family: 'Play', sans-serif;
             font-size: 24px;
             color: #FFFFFF;
