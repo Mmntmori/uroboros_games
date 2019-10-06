@@ -7,11 +7,10 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
     mode: 'development',
-    //entry: './src/pages/main/js/index.js',
-    entry: './src/block/footer/js/index.js',
+    entry: './src/pages/about/js/index.js',
     output: {
         filename: './js/index.js',
-        path: path.resolve(__dirname, '/dist')
+        path: path.resolve(__dirname, 'dist/')
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -24,16 +23,12 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: './index.html',
-            // template: './src/pages/main/index.pug',
-            template: './src/block/footer/index.pug',
+            template: './src/pages/about/index.pug',
             inject: true
         }),
         new CopyWebpackPlugin([{
-            // from: path.join(__dirname, './pages/main/img/'), 
-            from: path.join(__dirname, '../src/block/footer/js/index.js'), 
-
-            to: "img" }], {
-                
+            from: 'src/pages/about/img/',
+            to: 'img'}], {
             }),
         new UglifyJsPlugin()
     ],
