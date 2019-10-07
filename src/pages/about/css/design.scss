@@ -32,16 +32,64 @@ html,body {
 }
 
 .cta-button {
+    position: relative;
     padding: 14px 40px;  
-    font-family: 'Play', sans-serif;
-    font-size: 23px;
-    color: #FFFFFF;
-    letter-spacing: 0; 
     border: none;
     outline: none;
     cursor: pointer;
+    overflow: hidden;
     background: linear-gradient(129deg, #F3BE49 0%, #D55E1F 100%);
+    
     border-radius: 8px;
+    @media screen and (min-width: 768px){
+        padding: 18px 35px;    
+    }
+    
+
+    span {
+        font-family: 'Play', sans-serif;
+        font-size: 23px;
+        color: #FFFFFF;
+        letter-spacing: 0; 
+        position: relative;
+        @media screen and (min-width: 768px) {
+            font-size: 23px;
+            letter-spacing: 0;
+        }        
+    
+    }
+    &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: transparent; 
+        opacity: 0;
+        z-index: 0;
+        transition: all 300ms;
+    }
+
+    &:hover {
+        &:before {
+            background:  #D55E1F;
+            opacity: 1;
+            transition: all 300ms;
+        }
+    }
+
+    &:active {
+        &:before {
+            background:  #C7451C;
+            opacity: 1;
+            transition: all 300ms;
+        }
+    }
+
+        
+
 }
 
 .title {
@@ -51,6 +99,15 @@ html,body {
     background-size: cover;
     padding: 135px 0 65px;
     text-align: center;
+    @media screen and (min-width: 768px) {
+        padding: 125px 0 75px;
+    }
+
+    @media screen and (min-width: 1170px){
+        padding: 155px 0 85px;
+    }
+
+
     &__header {
         margin: 0;padding: 0;
         font-family: 'Play', sans-serif;
@@ -60,6 +117,17 @@ html,body {
         text-align: center;
         line-height: 30px;
         margin-bottom: 18px;
+        @media screen and (min-width: 768px) {
+            font-size: 36px;
+            letter-spacing: -0.45px;
+            line-height: 40px;
+            margin-bottom: 8px;
+        }
+        @media screen and (min-width: 1170px){
+            font-size: 48px;
+            letter-spacing: 0;
+            margin-bottom: 10px;
+        }
     }
 
     &__text {
@@ -71,6 +139,21 @@ html,body {
         text-align: center;
         line-height: 30px;
         margin-bottom: 56px;
+        @media screen and (min-width: 768px) {
+            font-size: 23px;
+            letter-spacing: 0;
+            line-height: 36px;
+            margin-bottom: 58px;
+            max-width: 569px;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
+        @media screen and (min-width: 1170px){
+            font-size: 23px;
+            line-height: 36px;
+        }
     }
 }
 
@@ -81,7 +164,17 @@ html,body {
     background-image: url('/img/content_bg_320.png');
     background-repeat: no-repeat;
     background-position: 100% 110%;
-    background-size: auto;
+    background-size: 100%;
+    @media screen and (min-width: 768px) {
+        padding: 70px 0 100px;
+        background-image: url('/img/content_bg_768.png');
+    }
+    @media screen and (min-width: 1170px){
+        padding: 90px 0 120px;
+        background-image: url('/img/content_bg_1170.png');
+
+    }
+
 
     &__header {
         margin: 0;padding: 0;
@@ -92,6 +185,23 @@ html,body {
         letter-spacing: -0.33px;
         text-align: center;
         margin-bottom: 16px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 25px;
+            font-size: 30px;
+            letter-spacing: -0.5px;
+            max-width: 534px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media screen and (min-width: 1170px){
+            font-size: 30px;
+            letter-spacing: 0;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+
     }
 
     &__text {
@@ -102,7 +212,28 @@ html,body {
         color: #FFFFFF;
         letter-spacing: 0;
         text-align: center;
-        margin: 0;padding: 0;margin-bottom: 50px;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 50px;
+        @media screen and (min-width: 768px) {
+            font-size: 18px;
+            letter-spacing: 0;
+            line-height: 23px;
+            max-width: 660px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        @media screen and (min-width: 1170px){
+            font-size: 18px;
+            line-height: 23px;  
+            margin-bottom: 128px;
+            max-width: 725px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+    
     }
 
     &__bottom-offer {
@@ -115,6 +246,28 @@ html,body {
         line-height: 32px;
         margin-top: 130px;
         margin-bottom: 45px;
+        @media screen and (min-width: 768px) {
+            margin-top: 235px;
+            margin-bottom: 60px;
+            font-size: 32px;
+            letter-spacing: -0.4px;
+            line-height: 44px;
+            max-width: 543px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        @media screen and (min-width: 1170px){
+            margin-top: 265px;
+            margin-bottom: 75px;
+            font-size: 40px;
+            letter-spacing: -0.5px;
+            line-height: 50px;max-width: 670px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+
     }
 
     &__crew {
@@ -122,6 +275,16 @@ html,body {
         flex-wrap: wrap;
         justify-content: center;
         margin-top: -45px;
+        @media screen and (min-width: 768px) {
+            margin-left: -44px;
+            margin-right: -44px;
+            margin-top: -55px;
+        }
+        @media screen and (min-width: 1170px){
+            padding: 0 84px;
+        }
+    
+
     }
 
     &__crew-member {
@@ -129,18 +292,33 @@ html,body {
         margin-left: auto;
         margin-right: auto;
         margin-top: 45px;
+        @media screen and (min-width: 768px) {
+            width: 148px;
+            margin-left: 44px;
+            margin-right: 44px;
+            margin-top: 55px;
+        }
+        @media screen and (min-width: 1170px){
+            width: 255px;
+        }
+    
+
     }
 
     &__crew-pic {
-        max-width: 200px;
-        max-height: 200px;
+        max-width: 100%;
+        max-height: 130px;
         font-size: 0;
         margin-bottom: 25px;
+        @media screen and (min-width: 1170px) {
+            max-height: 195px;
+            margin-bottom: 30px;
+        }
+
         img {
             object-fit: contain;
             max-width: 100%;
             max-height: 100%;
-
         }
     }
 
@@ -152,6 +330,10 @@ html,body {
         text-align: center;
         margin: 0;padding: 0;
         margin-bottom: 10px;
+        @media screen and (min-width: 1170px) {
+            font-size: 18px;
+        }
+        
     }
 
     &__crew-duty {
@@ -161,6 +343,11 @@ html,body {
         color: #FFFFFF;
         letter-spacing: -0.2px;
         text-align: center;margin: 0;padding: 0;
+        @media screen and (min-width: 1170px) {
+            font-size: 18px;
+            letter-spacing: -0.24px;
+        }
+
     }
 
     &__cta {
