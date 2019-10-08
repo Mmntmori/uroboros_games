@@ -7,7 +7,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
     mode: 'development',
-    entry: './src/pages/about/js/index.js',
+    entry: './src/pages/games/js/index.js',
     output: {
         filename: './js/index.js',
         path: path.resolve(__dirname, 'dist/')
@@ -23,11 +23,11 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: './index.html',
-            template: './src/pages/about/index.pug',
+            template: './src/pages/games/index.pug',
             inject: true
         }),
         new CopyWebpackPlugin([{
-            from: 'src/pages/about/img/',
+            from: 'src/pages/games/img/',
             to: 'img'}], {
             }),
         new UglifyJsPlugin()
