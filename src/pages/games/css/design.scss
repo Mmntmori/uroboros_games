@@ -32,11 +32,12 @@ html,body {
 }
 
 .steam {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     text-align: center;
     border: 1px solid #fff;
-    padding: 10px 36px;
-    vertical-align: middle;
+    padding: 6px 36px;
+
     background-color: #000;
     border-radius: 8px;
     // width: 200px;
@@ -45,9 +46,10 @@ html,body {
     transition-property: border-color;
 
     @media screen and (min-width: 768px) {
-        padding-top: 16px;
-        padding-bottom: 16px;
-        padding-left: 56px;padding-right: 56px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 56px;
+        padding-right: 56px;
     }
 
     svg {
@@ -69,9 +71,9 @@ html,body {
         }
     }
 
-
     &__icon {
         display: inline-block;
+        vertical-align: middle;
         font-size: 0;
         width: 35px;
         height: 35px;
@@ -91,10 +93,285 @@ html,body {
         vertical-align: top;
         span {
             font-weight: 900;
+            font-size: 24px
         }
         &:hover {
             text-decoration: none;
             color:  #fff;
         }
     }
+}
+
+
+.release {
+    padding: 117px 0 0;
+    background-color: rgba(30, 35, 66, 1);
+    background-image: url('/img/bg.png');
+    background-size: cover;
+    background-position: 30% 0%;
+    background-repeat: no-repeat;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+        padding: 113px 0 0;
+    }
+
+    @media screen and (min-width: 1170px){
+        padding: 64px 0 0;
+    }
+
+    &__wrap {
+        @media screen and (min-width: 1170px){
+            display: flex;
+            align-items: center;
+            padding: 90px 0;
+        }
+    }
+
+    &__description {
+        @media screen and (min-width: 1170px){
+            order: 2;
+            text-align: left;
+        }
+    }
+
+    &__header {
+        font-family: 'Russo One', sans-serif;
+        font-size: 28px;
+        color: #FFFFFF;
+        letter-spacing: -0.35px;
+        text-align: center;
+        line-height: 30px;
+        margin: 0;
+        @media screen and (min-width: 768px) {
+            font-size: 36px;
+            letter-spacing: -0.45px;
+            line-height: 40px;     
+        }
+        @media screen and (min-width: 1170px){
+            text-align: left;
+            max-width: 440px;
+            font-size: 40px;
+            letter-spacing: 0;
+        }
+    
+    }
+
+    &__text {
+        opacity: 0.7;
+        font-family: 'Play', sans-serif;
+        font-size: 18px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 23px;
+        margin-top: 14px;
+        @media screen and (min-width: 768px) {
+            font-size: 18px;
+            text-align: center;
+            line-height: 23px;
+            margin: 12px 0 0;
+        }
+        @media screen and (min-width: 1170px){
+            text-align: left;
+            max-width: 440px;
+            margin: 11px 0 0;
+        }
+    }
+
+    &__steam {
+        margin: 34px 0 0;
+        @media screen and (min-width: 1170px){
+            margin: 37px 0 0;
+        }
+    }
+    &__image {
+        margin: 50px -15px 0;
+        order: 1;
+        flex: 0 0 auto;
+        img {
+            font-size: 0;
+            max-width: 100%;
+        }
+        @media screen and (min-width: 768px) {
+            margin: 60px 0 -197px;
+        }
+    
+        @media screen and (min-width: 1170px){
+            width: 540px;
+            margin: 0 65px 0 0;
+        }
+
+    }
+}
+
+.upcoming {
+    background-color: rgba(30, 35, 66, 1);
+    text-align: center;
+    padding: 80px 0 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 291px 0 0;
+    }
+
+    @media screen and (min-width: 1170px){
+        padding: 90px 0 100px;
+    }
+
+
+    &__wrap {
+        @media screen and (min-width: 1170px){
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__description {
+        @media screen and (min-width: 1170px){
+            order: 2;
+            text-align: left;
+        }
+    }
+
+
+    &__header {
+        display: block;
+        font-family: 'Russo One', sans-serif;
+        font-size: 28px;
+        color: #FFFFFF;
+        letter-spacing: 7px; 
+        margin: 0;
+        @media screen and (min-width: 768px) {
+            font-size: 36px;
+            letter-spacing: 9px;
+        }  
+        @media screen and (min-width: 1170px){
+            font-size: 40px;
+            letter-spacing: 10px;
+        }
+     }
+
+    &__anounce {
+        margin: 10px 0 0;
+        display: block;
+        opacity: 0.6;
+        font-family: 'Play', sans-serif;
+        font-size: 18px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+
+    
+        @media screen and (min-width: 768px){
+            font-size: 18px;
+        }
+
+        @media screen and (min-width: 1170px){
+            font-size: 18px;
+            margin: 8px 0 0;
+        }    
+    }
+
+    &__date {
+        margin: 5px 0 0;
+        display: block;
+        font-family: 'Play', sans-serif;
+        font-size: 20px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        line-height: 30px;
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+
+    &__follow {
+        margin: 30px 0 0;
+        display: block;
+        font-family: 'Play', sans-serif;
+        font-size: 18px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+            margin: 35px 0 0;
+            font-size: 18px;
+        }
+    
+        @media screen and (min-width: 1170px){
+            max-width: 230px;
+            text-align: left;
+            margin: 48px 0 0;
+        }
+    }
+
+    &__sm {
+        margin: 25px 0 0;
+        @media screen and (min-width: 768px) {
+            margin: 16px 0 0;
+        }
+    
+        @media screen and (min-width: 1170px){
+            margin: 15px 0 0;
+        }
+    
+    }
+
+    .social-links {
+        &-wrap {
+            display: flex;
+            margin: -10px;
+            justify-content: center;
+            @media screen and (min-width: 1170px){
+                justify-content: flex-start;
+            }
+        }
+
+        &__item {
+            margin: 10px;
+            height: 45px;
+            width: 45px;
+            border-radius: 8px;
+            padding: 10px;
+            display: block;
+            background-color: #e2e2e2;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50), inset 0 1px 3px 0 rgba(0,0,0,0.50);
+            &--twitter {
+                background-color: #51BBD7;
+            }
+
+            &--fb {
+                background-color: #3B599F;
+            }
+
+            &--instagram {
+                background-color: #CE2A84;
+            }
+
+            &--discord {
+                background-color: #804DFF;
+            }
+            &-pic {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &__image {
+        margin: 50px -15px 0;
+        img {
+            max-width: 100%;
+        }
+        @media screen and (min-width: 768px) {
+            margin: 60px 0 0;
+        }
+    
+        @media screen and (min-width: 1170px){
+            width: 540px;
+            margin: 0 65px 0 0;
+        }
+    
+    }
+
 }
