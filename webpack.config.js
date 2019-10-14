@@ -6,7 +6,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
-    mode: 'development',
     entry: './src/pages/vacancy/js/index.js',
     output: {
         filename: './js/index.js',

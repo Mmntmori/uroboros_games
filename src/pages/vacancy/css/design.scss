@@ -116,6 +116,7 @@ html,body {
 
     &-list {
         display: flex;
+        flex-direction: column;
 
     }
 
@@ -167,28 +168,71 @@ html,body {
         }
 
         &__more {
+            margin-top: 15px;
+            cursor: pointer;
+
+            &.open {
+                .vacancy-item__more-text {
+                    &:first-of-type {
+                        display: inline-block;
+                    }
+
+                    &:last-of-type {
+                        display: none;
+                    }
+                }
+
+                .vacancy-item__more-icon {
+                    img {
+                        transform: rotate(180deg);
+                        transition: transform 300ms;
+                    }
+                }
+            }
+            
             &-text {
                 font-family: 'Play', sans-serif;
                 font-size: 15px;
                 color: #5994FF;
                 letter-spacing: -0.83px;
                 text-align: center;
+                &:last-of-type {
+                    display: inline-block;
+                }
+
+                &:first-of-type {
+                    display: none;
+                }
             }
 
             &-icon {
+                img {
+                    transition: transform 300ms;
+                }
                 display: inline-block;
-                
             }
         }
     }
 
-    &-info {}
+
+    &-info {
+        display: none;
+    }
+
 
     &-info__btn {
         width: 100%;
     }
 
     &-info-item {
+        padding: 30px 0;
+        border-top: 1px solid #d8d8d8;
+
+        &:first-child {
+            border: none;
+        }
+        
+
         &__title {
             font-family: 'Play', sans-serif;
             font-size: 18px;
@@ -201,6 +245,7 @@ html,body {
 
         &__list-item {
             display: flex;
+            margin: 15px 0 0;
 
         }
 
@@ -216,6 +261,8 @@ html,body {
         &__list-item-icon {
             flex: 0 0 auto;
             margin-right: 15px;
+            display: block;
+            margin-top: 4px;
         }
 
         &__text {
@@ -224,15 +271,7 @@ html,body {
             color: #303030;
             letter-spacing: 0;
             line-height: 20px;
-            margin: 0;
+            margin: 15px 0 0;
         }
-
-
     }
-
-
-
-
-    
-
 }
