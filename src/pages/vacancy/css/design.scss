@@ -92,6 +92,9 @@ html,body {
 .vacancy {
     padding: 100px 0 71px;
     background-color: #222851;
+    @media screen and (min-width: 768px) {
+        padding: 105px 0 85px;
+    }
 
     &__wrap {}
 
@@ -112,18 +115,29 @@ html,body {
         letter-spacing: 0;
         line-height: 23px;
         margin: 14px 0 0;
+        @media screen and (min-width: 768px) {
+            margin: 12px 0 0;
+        }    
     }
 
     &-list {
         display: flex;
         flex-direction: column;
-
+        margin: 40px 0 -25px;
+        @media screen and (min-width: 768px) {
+            margin: 34px 0 -30px;
+        }    
     }
 
     &-item {
         background: #F9F9FF;
         border-radius: 8px;
         padding: 25px 20px;
+        margin: 0 0 25px;
+        @media screen and (min-width: 768px) {
+            padding: 40px 45px;
+        }
+    
         &__header {
             display: flex;
             align-items: center;
@@ -133,6 +147,16 @@ html,body {
             display: block;
             margin: 0 10px 0 0;
             flex: 0 0 auto;
+            width: 22px;
+            position: relative;
+            @media screen and (min-width: 768px) {
+                margin: 0 15px 0 0;
+            }
+    
+            img {
+                position: absolute;
+                top: 0;left: 0;width: 100%;height: 100%;
+            }
         }
 
         &__title {
@@ -141,6 +165,7 @@ html,body {
             letter-spacing: -1.11px;
             text-align: center;
             margin: 0;
+            
             &.--red {
                 color: #D71810;
             }
@@ -165,6 +190,10 @@ html,body {
             letter-spacing: 0;
             line-height: 20px;
             margin: 20px 0 0;
+            @media screen and (min-width: 768px) {
+                margin: 15px 0 0;
+            }
+
         }
 
         &__more {
@@ -217,6 +246,10 @@ html,body {
 
     &-info {
         display: none;
+        @media screen and (min-width: 768px) {
+            // padding: 40px 0;
+            margin: 10px 0 0;
+        }
     }
 
 
@@ -227,6 +260,9 @@ html,body {
     &-info-item {
         padding: 30px 0;
         border-top: 1px solid #d8d8d8;
+        @media screen and (min-width: 768px) {
+            // padding: 40px 0;
+        }
 
         &:first-child {
             border: none;
@@ -241,12 +277,21 @@ html,body {
             margin: 0;
         }
 
-        &__list {}
+        &__list {
+            @media screen and (min-width: 768px) {
+                margin: 0 -60px 0 0;  
+                display: flex;
+                flex-wrap: wrap;  
+            }    
+        }
 
         &__list-item {
             display: flex;
             margin: 15px 0 0;
-
+            @media screen and (min-width: 768px) {
+                margin: 20px 60px 0 0;
+                width: 275px;
+            }    
         }
 
         &__list-item-text {
@@ -271,7 +316,7 @@ html,body {
             color: #303030;
             letter-spacing: 0;
             line-height: 20px;
-            margin: 15px 0 0;
+            margin: 15px 0 0;    
         }
     }
 }
