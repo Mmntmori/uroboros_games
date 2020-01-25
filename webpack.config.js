@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
-    entry: './src/pages/blog/js/index.js',
+    entry: './src/block/footer/js/index.js',
     output: {
         filename: './js/index.js',
         path: path.resolve(__dirname, 'dist/')
@@ -22,11 +22,11 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: './index.html',
-            template: './src/pages/blog/index.pug',
+            template: './src/block/footer/index.pug',
             inject: true
         }),
         new CopyWebpackPlugin([{
-            from: 'src/pages/blog/img/',
+            from: 'src/block/footer/img/',
             to: 'img'}], {
             }),
         new UglifyJsPlugin()
